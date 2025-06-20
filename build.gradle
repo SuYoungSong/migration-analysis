@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group = 'analysis'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // lombok
+    compileOnly("org.projectlombok:lombok:1.18.38")
+    annotationProcessor("org.projectlombok:lombok:1.18.38")
+
+    testCompileOnly("org.projectlombok:lombok:1.18.38")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
+
+    // slf4j
+    implementation("org.apache.logging.log4j:log4j-api:2.24.3")
+    implementation("org.apache.logging.log4j:log4j-core:2.24.3")
+    implementation("org.apache.logging.log4j:log4j-slf4j-impl:2.24.3")
+    implementation("org.slf4j:slf4j-api:1.7.36")
+
+    // Apache POI - save excel(.xlsx)
+    implementation 'org.apache.poi:poi-ooxml:5.4.0'
+
+    // JavaParser Core
+    implementation("com.github.javaparser:javaparser-core:3.27.0")
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
