@@ -26,7 +26,7 @@ public class XlsxResultWriter implements ResultWriter {
      * List<Map<String, String>>를 입력받습니다. List에 포함된 Map는 각 행마다 들어갈 내용이다.
      * Map의 Key는 해당 행에 value가 들어갈 컬럼명으로 사용한다.
      *
-     * @param data 엑셀로 변한활 데이터
+     * @param data 엑셀로 변한할 데이터
      * @param savePath 엑셀 파일을 저장할 경로
      */
     @Override
